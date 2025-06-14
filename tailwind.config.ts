@@ -9,17 +9,19 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ['var(--font-inter)', 'Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif'],
-      },
-      colors: {
+      },      colors: {
         background: "var(--background)",
-        foreground: "var(--foreground)",
-        // ZETA DIVISION風のミニマルカラーパレット
+        foreground: "var(--foreground)",        // 八雷神ブランドカラー
         yakusa: {
-          dark: '#0a0a0a',      // 濃いブラック
-          gray: '#1a1a1a',      // ダークグレー
-          light: '#f5f5f5',     // ライトグレー
-          white: '#ffffff',     // ピュアホワイト
-          red: '#dc2626',       // アクセントレッド
+          'bg-main': '#e4e5e6',      // メイン背景色
+          'bg-sub': '#f0f1f2',       // サブ背景色（より明るい）
+          'bg-card': '#ffffff',      // カード背景色
+          accent: '#b20024',         // アクセントカラー
+          text: '#000023',           // 文字色
+          'text-light': '#4a4a5a',   // ライト文字色
+          'text-muted': '#8a8a9a',   // ミュート文字色
+          white: '#ffffff',          // ホワイト
+          gray: '#6c757d',           // グレー
         },
       },
       animation: {

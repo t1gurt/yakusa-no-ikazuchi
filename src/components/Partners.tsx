@@ -26,7 +26,7 @@ export function Partners() {
     }
   ];
 
-  return (    <section id="partners" className="zeta-section bg-white">
+  return (    <section id="partners" className="zeta-section bg-yakusa-bg-main">
       <div className="zeta-container">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -35,7 +35,7 @@ export function Partners() {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl sm:text-5xl font-light text-black mb-8 tracking-wide">
+          <h2 className="text-4xl sm:text-5xl font-light text-yakusa-text mb-8 tracking-wide">
             PARTNERS
           </h2>
         </motion.div>
@@ -47,17 +47,16 @@ export function Partners() {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              viewport={{ once: true }}
-              className="zeta-card bg-gray-50 border border-gray-200 text-center"
+              viewport={{ once: true }}              className="zeta-card bg-yakusa-bg-card/90 border border-yakusa-text/8 text-center"
             >
-              <div className="w-16 h-16 bg-gray-200 rounded mx-auto mb-6"></div>
-              <h3 className="text-xl font-medium text-black mb-2 tracking-wider">
+              <div className="w-16 h-16 bg-yakusa-text/8 rounded mx-auto mb-6"></div>
+              <h3 className="text-xl font-medium text-yakusa-text mb-2 tracking-wider">
                 {partner.name}
               </h3>
-              <p className="text-sm text-gray-700 mb-4 font-medium tracking-wider uppercase">
+              <p className="text-sm text-yakusa-text-light mb-4 font-medium tracking-wider uppercase">
                 {partner.category}
               </p>
-              <p className="text-gray-600 leading-relaxed font-light">
+              <p className="text-yakusa-text-muted leading-relaxed font-light">
                 {partner.description}
               </p>
             </motion.div>

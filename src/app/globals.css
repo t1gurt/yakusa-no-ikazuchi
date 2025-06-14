@@ -11,16 +11,20 @@
 }
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 255, 255, 255;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 0, 0, 35;      /* #000023 */
+  --background-start-rgb: 228, 229, 230;  /* #e4e5e6 - メイン背景色 */
+  --background-end-rgb: 228, 229, 230;    /* #e4e5e6 - メイン背景色 */
+  --background-sub-rgb: 240, 241, 242;    /* #f0f1f2 - サブ背景色 */
+  --accent-rgb: 178, 0, 36;        /* #b20024 */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 10, 10, 10;
-    --background-end-rgb: 10, 10, 10;
+    --foreground-rgb: 0, 0, 35;      /* #000023 */
+    --background-start-rgb: 228, 229, 230;  /* #e4e5e6 - メイン背景色 */
+    --background-end-rgb: 228, 229, 230;    /* #e4e5e6 - メイン背景色 */
+    --background-sub-rgb: 240, 241, 242;    /* #f0f1f2 - サブ背景色 */
+    --accent-rgb: 178, 0, 36;        /* #b20024 */
   }
 }
 
@@ -61,17 +65,18 @@ body {
 }
 
 .zeta-card {
-  background: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 35, 0.08);
   border-radius: 8px;
   padding: 30px;
   transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
 }
 
 .zeta-card:hover {
-  border-color: rgba(0, 0, 0, 0.2);
+  border-color: rgba(178, 0, 36, 0.25);
   transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 35, 0.12);
 }
 
 .zeta-text-xl {
