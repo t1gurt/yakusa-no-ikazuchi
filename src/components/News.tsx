@@ -5,25 +5,22 @@ import { motion } from 'framer-motion';
 export function News() {
   const newsItems = [
     {
-      id: 1,
-      title: "八雷神設立記念イベント開催のお知らせ",
-      summary: "港区白金にて設立記念イベントを開催いたします。地域の皆様との交流を深める機会として...",
-      date: "2025.06.14",
-      category: "EVENT"
+      date: '2025.06.14',
+      category: 'EVENT',
+      title: '第1回八雷神フォーラム開催決定',
+      description: '港区白金において、地域活性化をテーマとした初回フォーラムを開催いたします。'
     },
     {
-      id: 2,
-      title: "地域活性化プロジェクト始動",
-      summary: "白金地区の歴史と文化を保護しながら、新たなコミュニティ形成を目指すプロジェクトが...",
-      date: "2025.06.10",
-      category: "PROJECT"
+      date: '2025.06.01',
+      category: 'TEAM',
+      title: '八雷神発足のお知らせ',
+      description: '混沌からの創造をテーマに、新たな市民団体「八雷神」が正式に発足いたしました。'
     },
     {
-      id: 3,
-      title: "パートナー企業との連携について",
-      summary: "地域発展に向けた取り組みを強化するため、新たなパートナー企業との連携を発表...",
-      date: "2025.06.05",
-      category: "PARTNERSHIP"
+      date: '2025.05.28',
+      category: 'PARTNERSHIP',
+      title: '地域パートナーシップ締結',
+      description: '白金地域の複数企業・団体とパートナーシップを締結し、活動基盤を構築しました。'
     }
   ];
 
@@ -42,54 +39,37 @@ export function News() {
           </h2>
         </motion.div>
 
-        <div className="space-y-8 max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           {newsItems.map((item, index) => (
-            <motion.article
-              key={item.id}
+            <motion.div
+              key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="border-b border-yakusa-gray/20 pb-8 hover:border-yakusa-red/50 transition-colors duration-300"
+              className="border-b border-yakusa-gray/20 py-8 last:border-b-0"
             >
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                <div className="flex-1">
-                  <div className="flex items-center gap-4 mb-3">
-                    <span className="text-sm text-yakusa-gray font-medium tracking-wider uppercase">
-                      {item.category}
-                    </span>
-                    <span className="text-sm text-yakusa-gray">
-                      {item.date}
-                    </span>
-                  </div>
-                  <h3 className="text-xl font-medium text-yakusa-dark mb-3 hover:text-yakusa-red transition-colors duration-300">
+              <div className="flex flex-col md:flex-row md:items-center gap-4">
+                <div className="flex-shrink-0">
+                  <span className="text-sm font-medium text-yakusa-gray tracking-wider">
+                    {item.date}
+                  </span>
+                  <span className="ml-4 px-3 py-1 bg-yakusa-red text-yakusa-white text-xs font-medium tracking-wider">
+                    {item.category}
+                  </span>
+                </div>
+                <div className="flex-grow">
+                  <h3 className="text-lg font-medium text-yakusa-dark mb-2 tracking-wide">
                     {item.title}
                   </h3>
-                  <p className="text-yakusa-gray leading-relaxed font-light">
-                    {item.summary}
+                  <p className="text-yakusa-gray font-light leading-relaxed">
+                    {item.description}
                   </p>
                 </div>
-                <div className="md:ml-8">
-                  <button className="text-yakusa-red hover:text-yakusa-dark text-sm font-medium tracking-wider uppercase transition-colors duration-300">
-                    READ MORE
-                  </button>
-                </div>
               </div>
-            </motion.article>
+            </motion.div>
           ))}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <button className="border border-yakusa-dark text-yakusa-dark hover:bg-yakusa-dark hover:text-yakusa-white px-8 py-4 text-sm font-medium tracking-wider uppercase transition-colors duration-300">
-            VIEW ALL NEWS
-          </button>
-        </motion.div>
       </div>
     </section>
   );

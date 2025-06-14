@@ -1,19 +1,14 @@
-'use client';
-
-import { motion } from 'framer-motion';
-import { Zap, Users, Target, ChevronDown } from 'lucide-react';
-import Image from 'next/image';
-import { Navigation } from '../components/Navigation-new';
-import { Hero } from '../components/Hero-new';
-import { About } from '../components/About-new';
-import { News } from '../components/News-new';
-import { Members } from '../components/Members-new';
-import { Partners } from '../components/Partners-new';
-import { Footer } from '../components/Footer-new';
+import { Navigation } from '../components/Navigation';
+import { Hero } from '../components/Hero';
+import { About } from '../components/About';
+import { News } from '../components/News';
+import { Members } from '../components/Members';
+import { Partners } from '../components/Partners';
+import { Footer } from '../components/Footer';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-blue-900">
+    <main>
       <Navigation />
       <Hero />
       <About />
@@ -21,6 +16,6 @@ export default function Home() {
       <Members />
       <Partners />
       <Footer />
-    </div>
+    </main>
   );
 }
