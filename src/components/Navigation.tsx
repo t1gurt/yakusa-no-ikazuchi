@@ -14,22 +14,19 @@ const navLinks = [
 export function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur border-b border-gray-100 shadow-sm">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-2">        {/* Logo */}
-        <Link 
+  return (    <nav className="fixed top-0 left-0 w-full z-50 bg-black/90 backdrop-blur border-b border-gray-800 shadow-lg">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">        {/* Logo */}        <Link 
           href="/" 
-          className="text-4xl font-bold text-gray-900 hover:text-blue-600"
-          style={{ fontFamily: 'var(--font-inter), Inter, sans-serif' }}
+          className="text-3xl font-bold text-white hover:text-gray-300 transition-colors duration-200 font-sans"
         >
           八雷神
         </Link>        {/* Desktop Menu */}
-        <ul className="flex gap-8 items-center list-none">
-          {navLinks.map((link) => (
-            <li key={link.name} className="list-none">              <Link
+        <ul className="hidden md:flex gap-12 items-center list-none">          {navLinks.map((link, index) => (
+            <li key={link.name} className="list-none">
+              <Link
                 href={link.href}
-                className="text-2xl font-bold"
-                style={{ fontFamily: 'var(--font-inter), Inter, sans-serif' }}
+                className="font-medium text-white/80 hover:text-white transition-colors duration-200 uppercase tracking-wider font-sans"
+                style={{ fontSize: '2.25rem', lineHeight: '2.5rem', fontWeight: 'bold' }}
               >
                 {link.name}
               </Link>
@@ -41,21 +38,20 @@ export function Navigation() {
           onClick={() => setMenuOpen((v) => !v)}
           aria-label="メニューを開く"
         >
-          <span className="block w-6 h-0.5 bg-gray-800"></span>
-          <span className="block w-6 h-0.5 bg-gray-800"></span>
-          <span className="block w-6 h-0.5 bg-gray-800"></span>
+          <span className="block w-6 h-0.5 bg-white"></span>
+          <span className="block w-6 h-0.5 bg-white"></span>
+          <span className="block w-6 h-0.5 bg-white"></span>
         </button>
-      </div>
-      {/* Mobile Menu */}
+      </div>      {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-white/95 border-t border-gray-100 shadow-sm">          <ul className="flex flex-col px-4 py-4 list-none">
+        <div className="md:hidden bg-black/95 border-t border-gray-800 shadow-lg">
+          <ul className="flex flex-col px-6 py-4 list-none">
             {navLinks.map((link) => (
-              <li key={link.name} className="list-none">
-                <Link
+              <li key={link.name} className="list-none">                <Link
                   href={link.href}
-                  className="block py-2 text-lg font-bold"
+                  className="block py-3 font-medium text-white/80 hover:text-white transition-colors duration-200 uppercase tracking-wider font-sans"
                   onClick={() => setMenuOpen(false)}
-                  style={{ fontFamily: 'var(--font-inter), Inter, sans-serif' }}
+                  style={{ fontSize: '1.875rem', lineHeight: '2.25rem', fontWeight: 'bold' }}
                 >
                   {link.name}
                 </Link>

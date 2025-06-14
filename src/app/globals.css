@@ -90,4 +90,23 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+  
+  /* Debug: Force large text size for navigation */
+  .nav-text-large {
+    font-size: 2.25rem !important; /* equivalent to text-4xl */
+    line-height: 2.5rem !important;
+  }
+  
+  .nav-text-medium {
+    font-size: 1.875rem !important; /* equivalent to text-3xl */
+    line-height: 2.25rem !important;
+  }
+  
+  /* Even more explicit debug class */
+  .debug-large-text {
+    font-size: 3rem !important; /* Even larger than text-4xl */
+    line-height: 3.5rem !important;
+    font-weight: bold !important;
+    color: yellow !important; /* Temporary for debugging */
+  }
 }
