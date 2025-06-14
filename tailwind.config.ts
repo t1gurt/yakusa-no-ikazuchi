@@ -5,22 +5,22 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
-  theme: {
-    extend: {      colors: {
+  ],  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['var(--font-inter)', 'Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif'],
+      },
+      colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
         // ZETA DIVISION風のミニマルカラーパレット
-        'yakusa': {
+        yakusa: {
           dark: '#0a0a0a',      // 濃いブラック
           gray: '#1a1a1a',      // ダークグレー
           light: '#f5f5f5',     // ライトグレー
           white: '#ffffff',     // ピュアホワイト
           red: '#dc2626',       // アクセントレッド
         },
-      },
-      fontFamily: {
-        'sans': ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',

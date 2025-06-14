@@ -18,23 +18,6 @@ export function Footer() {
             </p>
           </div>
 
-          {/* ナビゲーション */}
-          <div>
-            <h4 className="text-lg font-medium mb-4 tracking-wider">NAVIGATION</h4>
-            <ul className="space-y-2">
-              {['HOME', 'ABOUT', 'NEWS', 'MEMBERS', 'PARTNERS'].map((item) => (
-                <li key={item}>
-                  <a 
-                    href={`#${item.toLowerCase()}`}
-                    className="text-sm text-yakusa-light hover:text-yakusa-red transition-colors duration-200 font-light tracking-wider"
-                  >
-                    {item}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
           {/* コンタクト */}
           <div>
             <h4 className="text-lg font-medium mb-4 tracking-wider">CONTACT</h4>
