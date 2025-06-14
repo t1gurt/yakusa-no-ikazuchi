@@ -1,8 +1,3 @@
-'use client';
-
-import { motion } from 'framer-motion';
-import { Zap, Users, Target, ChevronDown } from 'lucide-react';
-import Image from 'next/image';
 import { Navigation } from '../components/Navigation-new';
 import { Hero } from '../components/Hero-new';
 import { About } from '../components/About-new';
@@ -13,7 +8,7 @@ import { Footer } from '../components/Footer-new';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-blue-900">
+    <main>
       <Navigation />
       <Hero />
       <About />
@@ -21,6 +16,6 @@ export default function Home() {
       <Members />
       <Partners />
       <Footer />
-    </div>
+    </main>
   );
 }

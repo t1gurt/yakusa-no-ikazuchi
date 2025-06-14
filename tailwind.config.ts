@@ -7,16 +7,16 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      colors: {
+    extend: {      colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        // 八雷神のカラーパレット
+        // ZETA DIVISION風のミニマルカラーパレット
         'yakusa': {
-          light: '#e4e5e6',
-          red: '#b20024',
-          navy: '#000023',
-          white: '#f6f7f8',
+          dark: '#0a0a0a',      // 濃いブラック
+          gray: '#1a1a1a',      // ダークグレー
+          light: '#f5f5f5',     // ライトグレー
+          white: '#ffffff',     // ピュアホワイト
+          red: '#dc2626',       // アクセントレッド
         },
       },
       fontFamily: {
