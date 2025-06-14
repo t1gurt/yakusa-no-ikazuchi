@@ -24,8 +24,7 @@ export function News() {
     }
   ];
 
-  return (
-    <section id="news" className="zeta-section bg-yakusa-white">
+  return (    <section id="news" className="zeta-section bg-white">
       <div className="zeta-container">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -34,7 +33,7 @@ export function News() {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl sm:text-5xl font-light text-yakusa-dark mb-8 tracking-wide">
+          <h2 className="text-4xl sm:text-5xl font-light text-black mb-8 tracking-wide">
             NEWS
           </h2>
         </motion.div>
@@ -47,22 +46,22 @@ export function News() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="border-b border-yakusa-gray/20 py-8 last:border-b-0"
+              className="border-b border-gray-200 py-8 last:border-b-0"
             >
               <div className="flex flex-col md:flex-row md:items-center gap-4">
                 <div className="flex-shrink-0">
-                  <span className="text-sm font-medium text-yakusa-gray tracking-wider">
+                  <span className="text-sm font-medium text-gray-600 tracking-wider">
                     {item.date}
                   </span>
-                  <span className="ml-4 px-3 py-1 bg-yakusa-red text-yakusa-white text-xs font-medium tracking-wider">
+                  <span className="ml-4 px-3 py-1 bg-black text-white text-xs font-medium tracking-wider">
                     {item.category}
                   </span>
                 </div>
                 <div className="flex-grow">
-                  <h3 className="text-lg font-medium text-yakusa-dark mb-2 tracking-wide">
+                  <h3 className="text-lg font-medium text-black mb-2 tracking-wide">
                     {item.title}
                   </h3>
-                  <p className="text-yakusa-gray font-light leading-relaxed">
+                  <p className="text-gray-600 font-light leading-relaxed">
                     {item.description}
                   </p>
                 </div>

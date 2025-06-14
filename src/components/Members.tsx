@@ -21,8 +21,7 @@ export function Members() {
     }
   ];
 
-  return (
-    <section id="members" className="zeta-section bg-yakusa-light">
+  return (    <section id="members" className="zeta-section bg-white">
       <div className="zeta-container">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -31,7 +30,7 @@ export function Members() {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl sm:text-5xl font-light text-yakusa-dark mb-8 tracking-wide">
+          <h2 className="text-4xl sm:text-5xl font-light text-black mb-8 tracking-wide">
             MEMBERS
           </h2>
         </motion.div>
@@ -44,16 +43,16 @@ export function Members() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="zeta-card bg-yakusa-white text-center"
+              className="zeta-card bg-gray-50 border border-gray-200 text-center"
             >
-              <div className="w-24 h-24 bg-yakusa-gray/20 rounded-full mx-auto mb-6"></div>
-              <h3 className="text-xl font-medium text-yakusa-dark mb-2 tracking-wider">
+              <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-6"></div>
+              <h3 className="text-xl font-medium text-black mb-2 tracking-wider">
                 {member.name}
               </h3>
-              <p className="text-sm text-yakusa-red mb-4 font-medium tracking-wider uppercase">
+              <p className="text-sm text-gray-700 mb-4 font-medium tracking-wider uppercase">
                 {member.role}
               </p>
-              <p className="text-yakusa-gray leading-relaxed font-light">
+              <p className="text-gray-600 leading-relaxed font-light">
                 {member.description}
               </p>
             </motion.div>
