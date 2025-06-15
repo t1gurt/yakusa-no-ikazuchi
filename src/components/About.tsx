@@ -14,36 +14,66 @@ export function About() {
             ABOUT
           </h2><div className="max-w-4xl mx-auto">{/* メインメッセージ - 団体の位置づけ */}
             <div className="mb-12">
-              <p className="text-3xl text-yakusa-text-light leading-relaxed font-light mb-8">
+              <p className="text-3xl text-yakusa-text-light leading-relaxed font-light mb-8 text-left">
                 Creation out of decay. (混沌からの創造)
-              </p>
-              
-              <div className="space-y-6 text-yakusa-text-muted mb-8">
+              </p>              
+              <div className="space-y-8 text-yakusa-text-muted mb-8 text-left">
                 <p className="text-2xl leading-relaxed font-light">
                   社会の歪みや課題、そこに宿る痛みを、私たちは「穢れ」とは呼ばない。
                   それは、新たな創造の源泉だ。
-                </p>
-                  <p className="text-2xl leading-relaxed font-light">
                   神話の雷神が混沌から生まれたように、最も強大なエネルギーは、最も深い課題の中にこそ眠っている。
                 </p>
-                
-                <p className="text-2xl leading-relaxed font-light">
-                  八雷神は、<strong className="text-yakusa-text font-medium">変革者</strong>と<strong className="text-yakusa-text font-medium">挑戦者</strong>が出会い、化学反応を起こすための<strong className="text-yakusa-text font-medium">ライフスタイルブランド</strong>であり、カルチャーそのものである。
-                </p>
-                
-                <p className="text-2xl leading-relaxed font-light">
-                  私たちは、社会課題への取り組みを、義務や自己犠牲ではなく、<strong className="text-yakusa-text font-medium">洗練された自己表現</strong>であり、<strong className="text-yakusa-text font-medium">最もクールなスタイル</strong>であると再定義する。
-                </p>
-                
-                <p className="text-2xl leading-relaxed font-light">
-                  すべての人が社会に関心を持ち、自らのスタイルで課題解決に挑むことが「当たり前」で「かっこいい」と誰もが信じる<strong className="text-yakusa-text font-medium">文化を、この国に根付かせる</strong>ことが私たちの目標だ。
-                </p>
+
+                <div className="space-y-6">
+                  <h4 className="text-3xl mb-4">
+                    Our People: 変革者と挑戦者 (Changemakers & Challengers)
+                  </h4>
+                  
+                  <p className="text-2xl leading-relaxed font-light">
+                    八雷神の物語は、二種類の人間によって紡がれる。
+                  </p>
+
+                  <div className="space-y-4">
+                    <p className="text-2xl leading-relaxed font-light">
+                      <strong>挑戦者 (Challenger):</strong><br />
+                      社会課題の渦中にいる当事者。私たちは彼らを、単なる「救われるべき存在」とは捉えない。その内に、現状を打破しうる巨大なエネルギーを秘めた、未来への「挑戦者」と捉える。
+                    </p>
+
+                    <p className="text-2xl leading-relaxed font-light">
+                      <strong>変革者 (Changemaker):</strong><br />
+                      挑戦者の内に眠るそのエネルギーを見出し、共鳴し、解放する触媒。彼らは課題を「解決」するだけでなく、挑戦者の痛みを、社会を前進させる力強い「創造のエネルギー」へと昇華させる。
+                    </p>
+                  </div>
+                </div>
+
+                <div className="space-y-6">
+                  <h4 className="text-3xl mb-4">
+                    Our Mission: A New Style of Change.
+                  </h4>
+                  
+                  <p className="text-2xl leading-relaxed font-light">
+                    八雷神は、この二者が出会い、化学反応を起こすための<strong className="text-yakusa-accent font-bold">ライフスタイルブランド</strong>であり、カルチャーそのものである。
+                    私たちは、社会課題への取り組みを、義務や自己犠牲ではなく、<strong className="text-yakusa-accent font-bold">洗練された自己表現</strong>であり、<strong className="text-yakusa-accent font-bold">最もクールなスタイル</strong>であると再定義する。既存の枠にとらわれないプロダクトやプロジェクトを通じて、変革者と挑戦者、そしてその活動を取り巻く世界を、より豊かに、より刺激的に彩っていく。
+                  </p>
+                </div>
+
+                <div className="space-y-6">
+                  <h4 className="text-3xl mb-4">
+                    Our Vision: A Society of Changemakers.
+                  </h4>
+                  
+                  <p className="text-2xl leading-relaxed font-light">
+                    私たちの最終的な目標は、特別な誰かだけが社会を語るのではない、未来の創造。
+                    すべての人が社会に関心を持ち、自らのスタイルで課題解決に挑むことが「当たり前」で「かっこいい」と誰もが信じる<strong className="text-yakusa-accent font-bold">文化を、この国に根付かせる</strong>ことだ。
+                  </p>
+
+                  <p className="text-2xl leading-relaxed font-light font-medium">
+                    八雷神は、その狼煙（のろし）となる。
+                  </p>
+                </div>
               </div>
             </div>
               <div className="border-t border-yakusa-text/10 pt-8">
-              <p className="text-3xl text-yakusa-text-light leading-relaxed font-light mb-4">
-                メインメッセージのキーワードをより深く理解するために
-              </p>
               <p className="text-2xl text-yakusa-text-muted leading-relaxed font-light">
                 八雷神の理念を構成する重要なコンセプトについて詳しく解説します。
               </p>
