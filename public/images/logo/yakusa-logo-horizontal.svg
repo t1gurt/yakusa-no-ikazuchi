@@ -1,0 +1,21 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#D4AF37"/>
+      <stop offset="100%" style="stop-color:#FFD700"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- 雷のシンボル（左） -->
+  <g fill="url(#logoGradient)">
+    <path d="M15 15 L25 15 L20 25 L30 25 L15 45 L25 30 L15 30 Z" stroke="#B8860B" stroke-width="1"/>
+  </g>
+  
+  <!-- 八雷神 テキスト -->
+  <text x="45" y="38" font-family="serif" font-size="28" font-weight="bold" fill="url(#logoGradient)" letter-spacing="2px">八雷神</text>
+  
+  <!-- 雷のシンボル（右） -->
+  <g fill="url(#logoGradient)">
+    <path d="M170 15 L180 15 L175 25 L185 25 L170 45 L180 30 L170 30 Z" stroke="#B8860B" stroke-width="1"/>
+  </g>
+</svg>

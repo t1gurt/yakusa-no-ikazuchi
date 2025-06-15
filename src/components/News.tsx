@@ -32,8 +32,7 @@ export function News() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center mb-20"
-        >
-          <h2 className="text-4xl sm:text-5xl font-light text-yakusa-text mb-8 tracking-wide">
+        >          <h2 className="text-5xl sm:text-6xl font-light text-yakusa-text mb-8 tracking-wide">
             NEWS
           </h2>
         </motion.div>
@@ -49,17 +48,17 @@ export function News() {
               className="border-b border-yakusa-text/15 py-8 last:border-b-0"
             >
               <div className="flex flex-col md:flex-row md:items-center gap-4">
-                <div className="flex-shrink-0">                  <span className="text-sm font-medium text-yakusa-text-light tracking-wider">
+                <div className="flex-shrink-0">                  <span className="text-lg font-medium text-yakusa-text-light tracking-wider">
                     {item.date}
                   </span>
-                  <span className="ml-4 px-3 py-1 bg-yakusa-accent text-white text-xs font-medium tracking-wider">
+                  <span className="ml-4 px-3 py-1 bg-yakusa-accent text-white text-sm font-medium tracking-wider">
                     {item.category}
                   </span>
                 </div>
-                <div className="flex-grow">                  <h3 className="text-lg font-medium text-yakusa-text mb-2 tracking-wide">
+                <div className="flex-grow">                  <h3 className="text-2xl font-medium text-yakusa-text mb-2 tracking-wide">
                     {item.title}
                   </h3>
-                  <p className="text-yakusa-text-muted font-light leading-relaxed">
+                  <p className="text-xl text-yakusa-text-muted font-light leading-relaxed">
                     {item.description}
                   </p>
                 </div>

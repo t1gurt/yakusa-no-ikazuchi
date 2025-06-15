@@ -1,28 +1,26 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
-export function Partners() {
-  const partners = [
+export function Partners() {  const partners = [
     {
       name: 'パートナー企業A',
       category: 'Technology',
-      description: 'デジタル変革を通じたコミュニティ支援'
+      description: 'デジタル変革を通じたコミュニティ支援',
+      logo: '/images/partners/partner-a.svg'
     },
     {
       name: 'パートナー企業B',
       category: 'Culture',
-      description: '伝統文化保存と現代アートの融合プロジェクト'
+      description: '伝統文化保存と現代アートの融合プロジェクト',
+      logo: '/images/partners/partner-b.svg'
     },
     {
       name: 'パートナー企業C',
       category: 'Community',
-      description: '地域住民との持続可能な関係構築'
-    },
-    {
-      name: 'パートナー企業D',
-      category: 'Innovation',
-      description: '新たな価値創造への挑戦とサポート'
+      description: '地域住民との持続可能な関係構築',
+      logo: '/images/partners/partner-c.svg'
     }
   ];
 
@@ -34,8 +32,7 @@ export function Partners() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center mb-20"
-        >
-          <h2 className="text-4xl sm:text-5xl font-light text-yakusa-text mb-8 tracking-wide">
+        >          <h2 className="text-6xl sm:text-7xl font-light text-yakusa-text mb-8 tracking-wide">
             PARTNERS
           </h2>
         </motion.div>
@@ -49,14 +46,25 @@ export function Partners() {
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}              className="zeta-card bg-yakusa-bg-card/90 border border-yakusa-text/8 text-center"
             >
-              <div className="w-16 h-16 bg-yakusa-text/8 rounded mx-auto mb-6"></div>
-              <h3 className="text-xl font-medium text-yakusa-text mb-2 tracking-wider">
+              <div className="w-16 h-16 relative mx-auto mb-6 rounded overflow-hidden bg-yakusa-text/8">
+                <Image
+                  src={partner.logo}
+                  alt={`${partner.name} logo`}
+                  fill
+                  className="object-contain p-2"
+                  sizes="64px"
+                  onError={(e) => {
+                    // フォールバック：画像が見つからない場合は非表示にしてプレースホルダーを表示
+                    e.currentTarget.style.display = 'none';
+                  }}
+                />
+              </div>              <h3 className="text-3xl font-medium text-yakusa-text mb-2 tracking-wider">
                 {partner.name}
               </h3>
-              <p className="text-sm text-yakusa-text-light mb-4 font-medium tracking-wider uppercase">
+              <p className="text-2xl text-yakusa-text-light mb-4 font-medium tracking-wider uppercase">
                 {partner.category}
               </p>
-              <p className="text-yakusa-text-muted leading-relaxed font-light">
+              <p className="text-2xl text-yakusa-text-muted leading-relaxed font-light">
                 {partner.description}
               </p>
             </motion.div>
