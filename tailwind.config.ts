@@ -19,7 +19,7 @@ const config: Config = {
           accent: '#b20024',         // アクセントカラー
           text: '#000023',           // 文字色
           'text-light': '#4a4a5a',   // ライト文字色
-          'text-muted': '#8a8a9a',   // ミュート文字色
+          'text-muted': '#4a4a5a',   // ミュート文字色（text-lightと統一）
           white: '#ffffff',          // ホワイト
           gray: '#6c757d',           // グレー
         },

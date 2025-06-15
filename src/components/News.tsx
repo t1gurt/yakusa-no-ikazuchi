@@ -29,10 +29,9 @@ export function News() {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}          viewport={{ once: true }}
           className="text-center mb-20"
-        >          <h2 className="text-5xl sm:text-6xl font-light text-yakusa-text mb-8 tracking-wide">
+        >          <h2 className="text-4xl sm:text-5xl font-light text-yakusa-text mb-8 tracking-wide">
             NEWS
           </h2>
         </motion.div>

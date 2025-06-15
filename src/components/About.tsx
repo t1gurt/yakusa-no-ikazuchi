@@ -9,12 +9,10 @@ export function About() {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-20"
-        >          <h2 className="text-6xl sm:text-7xl font-light text-yakusa-text mb-8 tracking-wide">
+          transition={{ duration: 0.8 }}          viewport={{ once: true }}
+          className="text-center mb-20"        >          <h2 className="text-4xl sm:text-5xl font-light text-yakusa-text mb-8 tracking-wide">
             ABOUT
-          </h2><div className="max-w-4xl mx-auto">            {/* メインメッセージ - 団体の位置づけ */}
+          </h2><div className="max-w-4xl mx-auto">{/* メインメッセージ - 団体の位置づけ */}
             <div className="mb-12">
               <p className="text-3xl text-yakusa-text-light leading-relaxed font-light mb-8">
                 Creation out of decay. (混沌からの創造)
