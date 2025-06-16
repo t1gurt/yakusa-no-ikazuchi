@@ -150,20 +150,18 @@ export function Members() {
                 {/* 説明 */}
                 <p className="text-lg lg:text-xl text-yakusa-text-muted leading-relaxed font-light flex-grow">
                   {member.description}
-                </p>
-
-                {/* タグプレビュー */}
+                </p>                {/* タグプレビュー */}
                 <div className="mt-6 flex flex-wrap justify-center gap-2 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
                   {member.tags.slice(0, 2).map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
-                      className="px-3 py-1 bg-yakusa-accent/15 text-yakusa-accent rounded-full text-sm font-medium border border-yakusa-accent/20"
+                      className="px-4 py-2 text-yakusa-text-muted text-sm font-medium tracking-wide uppercase"
                     >
                       {tag}
                     </span>
                   ))}
                   {member.tags.length > 2 && (
-                    <span className="px-3 py-1 bg-yakusa-text/10 text-yakusa-text-muted rounded-full text-sm font-medium">
+                    <span className="px-4 py-2 text-yakusa-text-muted text-sm font-medium tracking-wide uppercase">
                       +{member.tags.length - 2}
                     </span>
                   )}
@@ -276,14 +274,13 @@ export function Members() {
                   transition={{ duration: 0.5, delay: 0.5 }}
                   className="mb-8"
                 >
-                  <div className="flex flex-wrap gap-2">
-                    {selectedMember.tags.map((tag, index) => (
+                  <div className="flex flex-wrap gap-2">                    {selectedMember.tags.map((tag, index) => (
                       <motion.span
                         key={index}
                         initial={{ scale: 0.8, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         transition={{ duration: 0.3, delay: 0.6 + index * 0.1 }}
-                        className="px-3 py-1.5 bg-gradient-to-r from-yakusa-accent/15 to-yakusa-accent/10 text-yakusa-accent rounded-full text-sm font-medium border border-yakusa-accent/25 hover:border-yakusa-accent/40 transition-all duration-300 hover:scale-105"
+                        className="px-4 py-2 text-yakusa-text-muted text-sm font-medium tracking-wide uppercase"
                       >
                         {tag}
                       </motion.span>
