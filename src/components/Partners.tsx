@@ -159,14 +159,14 @@ export function Partners() {
                   共に社会課題解決に取り組み、<br className="hidden sm:block" />
                   未来の文化を創造するパートナーを募集しています。
                 </p>
-                
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  <motion.div
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
                   className="inline-block"
                 >
-                  <div className="px-8 py-4 bg-gradient-to-r from-yakusa-accent to-yakusa-accent/80 hover:from-yakusa-accent/90 hover:to-yakusa-accent/70 text-white rounded-full font-medium transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl">
-                    お問い合わせ
+                  <div className="relative px-8 py-3 text-yakusa-text font-light tracking-wide border border-yakusa-accent/30 hover:border-yakusa-accent/50 rounded-lg transition-all duration-300 cursor-pointer group overflow-hidden">
+                    <span className="relative z-10">お問い合わせ</span>
+                    <div className="absolute inset-0 bg-yakusa-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                 </motion.div>
               </div>
