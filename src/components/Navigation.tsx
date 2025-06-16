@@ -40,10 +40,10 @@ export function Navigation() {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <div className="max-w-7xl mx-auto px-6 py-4">          {/* Desktop Menu - Center Layout */}
-          <div className="hidden md:flex items-center justify-center relative">
+          <div className="hidden md:grid grid-cols-3 items-center w-full">
             {/* Left Navigation */}
             <motion.ul 
-              className="flex gap-12 items-center list-none mr-24"
+              className="flex gap-12 items-center list-none justify-end"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -65,9 +65,11 @@ export function Navigation() {
                   </Link>
                 </motion.li>
               ))}
-            </motion.ul>            {/* Center Logo - Absolutely centered */}
+            </motion.ul>
+
+            {/* Center Logo - Perfectly centered */}
             <motion.div
-              className="absolute left-1/2 transform -translate-x-1/2 z-20"
+              className="flex justify-center"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.1 }}
@@ -92,7 +94,7 @@ export function Navigation() {
 
             {/* Right Navigation */}
             <motion.ul 
-              className="flex gap-12 items-center list-none ml-24"
+              className="flex gap-12 items-center list-none justify-start"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
