@@ -28,11 +28,10 @@ export function Navigation() {
   }, []);
 
   return (
-    <>
-      <motion.nav 
+    <>      <motion.nav 
         className={`fixed top-0 left-0 w-full z-[60] transition-all duration-500 ${
           scrolled 
-            ? 'bg-black/80 backdrop-blur-xl border-b border-white/20 shadow-2xl shadow-black/50' 
+            ? 'bg-yakusa-bg-main/90 backdrop-blur-xl border-b border-yakusa-text/10 shadow-2xl shadow-yakusa-bg-main/30' 
             : 'bg-transparent border-b border-white/10'
         }`}
         initial={{ y: -100 }}
@@ -47,8 +46,7 @@ export function Navigation() {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              {navLinksLeft.map((link, index) => (
+            >              {navLinksLeft.map((link, index) => (
                 <motion.li 
                   key={link.name} 
                   className="list-none"
@@ -58,10 +56,14 @@ export function Navigation() {
                 >
                   <Link
                     href={link.href}
-                    className="relative font-medium text-white/90 hover:text-red-400 transition-all duration-300 uppercase tracking-wider font-sans text-sm group"
+                    className={`relative font-medium transition-all duration-300 uppercase tracking-wider font-sans text-sm group ${
+                      scrolled ? 'text-yakusa-text hover:text-yakusa-accent' : 'text-white/90 hover:text-red-400'
+                    }`}
                   >
                     {link.name}
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-red-600 to-orange-500 group-hover:w-full transition-all duration-300"></span>
+                    <span className={`absolute bottom-0 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300 ${
+                      scrolled ? 'bg-gradient-to-r from-yakusa-accent to-yakusa-accent/70' : 'bg-gradient-to-r from-red-600 to-orange-500'
+                    }`}></span>
                   </Link>
                 </motion.li>
               ))}
@@ -77,8 +79,7 @@ export function Navigation() {
               <Link 
                 href="/" 
                 className="relative group hover:opacity-80 transition-all duration-300"
-              >
-                <div className="relative">
+              >                <div className="relative">
                   <Image
                     src="/images/logo/yakusa-logo-horizontal.png"
                     alt="八雷神"
@@ -87,7 +88,9 @@ export function Navigation() {
                     className="h-12 w-auto transform group-hover:scale-105 transition-transform duration-300"
                     priority
                   />
-                  <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-orange-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"></div>
+                  <div className={`absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl ${
+                    scrolled ? 'bg-gradient-to-r from-yakusa-accent/30 to-yakusa-accent/20' : 'bg-gradient-to-r from-red-600/20 to-orange-500/20'
+                  }`}></div>
                 </div>
               </Link>
             </motion.div>
@@ -98,8 +101,7 @@ export function Navigation() {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              {navLinksRight.map((link, index) => (
+            >              {navLinksRight.map((link, index) => (
                 <motion.li 
                   key={link.name} 
                   className="list-none"
@@ -109,10 +111,14 @@ export function Navigation() {
                 >
                   <Link
                     href={link.href}
-                    className="relative font-medium text-white/90 hover:text-red-400 transition-all duration-300 uppercase tracking-wider font-sans text-sm group"
+                    className={`relative font-medium transition-all duration-300 uppercase tracking-wider font-sans text-sm group ${
+                      scrolled ? 'text-yakusa-text hover:text-yakusa-accent' : 'text-white/90 hover:text-red-400'
+                    }`}
                   >
                     {link.name}
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-red-600 to-orange-500 group-hover:w-full transition-all duration-300"></span>
+                    <span className={`absolute bottom-0 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300 ${
+                      scrolled ? 'bg-gradient-to-r from-yakusa-accent to-yakusa-accent/70' : 'bg-gradient-to-r from-red-600 to-orange-500'
+                    }`}></span>
                   </Link>
                 </motion.li>
               ))}
@@ -141,9 +147,7 @@ export function Navigation() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-orange-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-lg"></div>
               </Link>
-            </motion.div>
-
-            {/* Mobile Menu Button */}
+            </motion.div>            {/* Mobile Menu Button */}
             <motion.button
               className="relative flex flex-col gap-1 px-3 py-2 group"
               onClick={() => setMenuOpen((v) => !v)}
@@ -153,20 +157,26 @@ export function Navigation() {
               transition={{ duration: 0.6 }}
             >
               <motion.span 
-                className="block w-6 h-0.5 bg-white transition-all duration-300"
+                className={`block w-6 h-0.5 transition-all duration-300 ${
+                  scrolled ? 'bg-yakusa-text' : 'bg-white'
+                }`}
                 animate={{
                   rotate: menuOpen ? 45 : 0,
                   y: menuOpen ? 6 : 0,
                 }}
               ></motion.span>
               <motion.span 
-                className="block w-6 h-0.5 bg-white transition-all duration-300"
+                className={`block w-6 h-0.5 transition-all duration-300 ${
+                  scrolled ? 'bg-yakusa-text' : 'bg-white'
+                }`}
                 animate={{
                   opacity: menuOpen ? 0 : 1,
                 }}
               ></motion.span>
               <motion.span 
-                className="block w-6 h-0.5 bg-white transition-all duration-300"
+                className={`block w-6 h-0.5 transition-all duration-300 ${
+                  scrolled ? 'bg-yakusa-text' : 'bg-white'
+                }`}
                 animate={{
                   rotate: menuOpen ? -45 : 0,
                   y: menuOpen ? -6 : 0,
@@ -178,9 +188,8 @@ export function Navigation() {
 
         {/* Mobile Menu */}
         <AnimatePresence>
-          {menuOpen && (
-            <motion.div 
-              className="md:hidden absolute top-full left-0 w-full bg-black/95 backdrop-blur-xl border-t border-white/20 shadow-2xl"
+          {menuOpen && (            <motion.div 
+              className="md:hidden absolute top-full left-0 w-full bg-yakusa-bg-main/95 backdrop-blur-xl border-t border-yakusa-text/10 shadow-2xl"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
@@ -201,14 +210,13 @@ export function Navigation() {
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -20 }}
                     transition={{ duration: 0.3, delay: index * 0.05 }}
-                  >
-                    <Link
+                  >                    <Link
                       href={link.href}
-                      className="relative block py-4 px-4 font-medium text-white/90 hover:text-red-400 transition-all duration-300 uppercase tracking-wider font-sans text-sm rounded-lg hover:bg-white/5 group"
+                      className="relative block py-4 px-4 font-medium text-yakusa-text hover:text-yakusa-accent transition-all duration-300 uppercase tracking-wider font-sans text-sm rounded-lg hover:bg-yakusa-accent/5 group"
                       onClick={() => setMenuOpen(false)}
                     >
                       <span className="relative z-10">{link.name}</span>
-                      <div className="absolute inset-0 bg-gradient-to-r from-red-600/10 to-orange-500/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      <div className="absolute inset-0 bg-gradient-to-r from-yakusa-accent/10 to-yakusa-accent/5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </Link>
                   </motion.li>
                 ))}
@@ -220,9 +228,8 @@ export function Navigation() {
 
       {/* Mobile Menu Overlay */}
       <AnimatePresence>
-        {menuOpen && (
-          <motion.div
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[59] md:hidden"
+        {menuOpen && (          <motion.div
+            className="fixed inset-0 bg-yakusa-bg-main/50 backdrop-blur-sm z-[59] md:hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
