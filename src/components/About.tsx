@@ -44,7 +44,7 @@ export function About() {
 
                 <div className="space-y-6">
                   <h4 className="text-3xl mb-4">
-                    Our People: 変革者と挑戦者 (Changemakers & Challengers)
+                    Our People: 変革者と挑戦者
                   </h4>
                   
                   <p className="text-2xl leading-relaxed font-light">

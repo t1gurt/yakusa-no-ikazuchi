@@ -13,13 +13,13 @@ export function Members() {  const members = [
     {
       name: "中村 綾子",
       role: "ママ",
-      description: "恋愛バラエティが大好き！ジュエリーも作るよ！",
+      description: "恋愛バラエティが大好き！",
       image: "/images/members/ayako.jpg"
     },
     {
       name: "中村 虎政",
       role: "かわいい担当",
-      description: "とにかくかわいい1年生。マイブームはマインクラフト。",
+      description: "とにかくかわいい1年生。",
       image: "/images/members/toramasa.jpg"
     }
   ];
@@ -56,13 +56,13 @@ export function Members() {  const members = [
                     e.currentTarget.style.display = 'none';
                   }}
                 />
-              </div>              <h3 className="text-3xl font-medium text-yakusa-text mb-2 tracking-wider">
+              </div>              <h3 className="text-2xl font-medium text-yakusa-text mb-2 tracking-wider">
                 {member.name}
               </h3>
-              <p className="text-2xl text-yakusa-text-light mb-4 font-medium tracking-wider uppercase">
+              <p className="text-xl text-yakusa-text-light mb-4 font-medium tracking-wider uppercase">
                 {member.role}
               </p>
-              <p className="text-2xl text-yakusa-text-muted leading-relaxed font-light">
+              <p className="text-xl text-yakusa-text-muted leading-relaxed font-light">
                 {member.description}
               </p>
             </motion.div>

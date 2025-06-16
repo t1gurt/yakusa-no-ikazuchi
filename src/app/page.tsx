@@ -12,8 +12,8 @@ export default function Home() {
       <Navigation />
       <Hero />
       <About />
-      <News />
       <Members />
+      <News />
       <Partners />
       <Footer />
     </main>

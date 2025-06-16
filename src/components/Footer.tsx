@@ -8,7 +8,7 @@ export function Footer() {
               Creation out of decay.
             </p>
             <p className="text-lg text-yakusa-text-muted font-light">
-              港区白金を拠点とする市民団体
+              港区白金を拠点とするライフスタイルブランド。
             </p>
           </div>
 
