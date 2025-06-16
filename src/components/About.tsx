@@ -38,8 +38,7 @@ export function About() {
             </h2>
           </motion.div>
           
-          {/* ロゴ */}
-          <motion.div 
+          {/* ロゴ */}          <motion.div 
             initial={{ scale: 0.8, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -48,7 +47,7 @@ export function About() {
           >
             <div className="relative group">
               <div className="absolute inset-0 bg-yakusa-accent/20 rounded-full blur-xl opacity-0 group-hover:opacity-60 transition-all duration-500" />
-              <div className="relative w-32 h-32 lg:w-40 lg:h-40 rounded-full overflow-hidden bg-gradient-to-br from-yakusa-accent/10 to-yakusa-accent/5 border border-white/10 group-hover:border-yakusa-accent/30 transition-all duration-500 group-hover:scale-105">
+              <div className="relative w-32 h-32 lg:w-40 lg:h-40 rounded-full overflow-hidden group-hover:scale-105 transition-all duration-500">
                 <img 
                   src="/images/logo/yakusa-logo-square.png" 
                   alt="八雷神ロゴ" 
@@ -306,12 +305,11 @@ export function About() {
                       私たちが考える『雷神』とは、停滞した空気を一掃し、大地に実りをもたらす恵みの雨を呼ぶ、力強い活性化のエネルギーの比喩です。雷鳴のように私たちの活動の声を響かせ、稲妻のように新たな光を街にもたらし、白金の未来をより豊かに耕していく。
                     </p>
                   </motion.div>
-                  
-                  <motion.div
+                    <motion.div
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: 1.1 }}
-                    className="bg-gradient-to-r from-yakusa-accent/10 to-yakusa-accent/5 rounded-xl p-6 border border-yakusa-accent/20"
+                    className="bg-gradient-to-r from-yakusa-bg-card/20 to-yakusa-bg-card/10 rounded-xl p-6 border border-white/5"
                   >
                     <p className="text-lg leading-relaxed font-light">
                       かつて白金を守った雷神の御霊は、失われたわけではありません。地域の総鎮守である白金氷川神社に合祀され、今も静かに私たちを見守っています。私たち『八雷神』は、その守護と活性化の御心を受け継ぎ、現代における地域の担い手として、白金のために尽力することを誓うものです。

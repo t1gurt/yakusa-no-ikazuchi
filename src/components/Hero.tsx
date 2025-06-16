@@ -72,18 +72,6 @@ export function Hero() {
             </div>
           </motion.div>
           
-          {/* 追加の装飾要素 */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 1.2 }}
-            className="mt-16 flex justify-center"
-          >
-            <div className="relative">
-              <div className="w-2 h-16 bg-gradient-to-b from-yakusa-accent/50 to-transparent rounded-full" />
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-yakusa-accent/30 rounded-full animate-ping" />
-            </div>
-          </motion.div>
         </motion.div>
       </div>
     </section>
