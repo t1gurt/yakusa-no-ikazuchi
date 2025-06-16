@@ -112,7 +112,7 @@ export function Footer() {
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h4 className="text-2xl font-medium mb-6 tracking-wider text-white">クイックリンク</h4>
+            <h4 className="text-2xl font-light mb-6 tracking-wider text-white">クイックリンク</h4>
             <ul className="space-y-4">
               {quickLinks.map((link, index) => (
                 <motion.li 
@@ -121,10 +121,9 @@ export function Footer() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                   viewport={{ once: true }}
-                >
-                  <a 
+                >                  <a 
                     href={link.href} 
-                    className="text-lg text-gray-300 hover:text-red-400 transition-colors duration-300 font-light tracking-wide hover:pl-2 transform transition-all duration-300"
+                    className="text-lg font-light !text-white hover:!text-gray-300 transition-colors duration-300 font-light tracking-wide hover:pl-2 transform transition-all duration-300"
                   >
                     {link.name}
                   </a>
@@ -140,7 +139,7 @@ export function Footer() {
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <h4 className="text-2xl font-medium mb-6 tracking-wider text-white">CONTACT</h4>
+            <h4 className="text-2xl font-light mb-6 tracking-wider text-white">CONTACT</h4>
             <div className="space-y-4">
               <motion.div 
                 className="flex items-start space-x-3"
@@ -150,7 +149,7 @@ export function Footer() {
                 viewport={{ once: true }}
               >
                 <span className="text-red-400 mt-1">📍</span>
-                <p className="text-lg text-gray-300 font-light">東京都港区白金</p>
+                <p className="text-lg text-gray-400 font-light">東京都港区白金</p>
               </motion.div>
               <motion.div 
                 className="flex items-start space-x-3"
@@ -159,10 +158,9 @@ export function Footer() {
                 transition={{ duration: 0.6, delay: 0.6 }}
                 viewport={{ once: true }}
               >
-                <span className="text-red-400 mt-1">✉️</span>
-                <a 
+                <span className="text-red-400 mt-1">✉️</span>                <a 
                   href="mailto:contact@8ikazuchi.jp" 
-                  className="text-lg text-gray-300 hover:text-red-400 transition-colors duration-300 font-light"
+                  className="text-lg !text-white hover:!text-gray-300 transition-colors duration-300 font-light"
                 >
                   contact@8ikazuchi.jp
                 </a>
@@ -195,16 +193,15 @@ export function Footer() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
               viewport={{ once: true }}
-            >
-              <a 
+            >              <a 
                 href="/privacy" 
-                className="text-lg text-gray-400 hover:text-red-400 transition-colors duration-300 font-light tracking-wide"
+                className="text-lg !text-white hover:!text-gray-300 transition-colors duration-300 font-light tracking-wide"
               >
                 プライバシーポリシー
               </a>
               <a 
                 href="/terms" 
-                className="text-lg text-gray-400 hover:text-red-400 transition-colors duration-300 font-light tracking-wide"
+                className="text-lg !text-white hover:!text-gray-300 transition-colors duration-300 font-light tracking-wide"
               >
                 利用規約
               </a>

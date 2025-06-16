@@ -42,17 +42,16 @@ export function Hero() {
             </h1>
           </motion.div>
           
-          {/* 読み仮名 */}
-          <motion.div
+          {/* 読み仮名 */}          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
             className="relative"
           >
-            <p className="text-2xl lg:text-3xl font-light tracking-[0.3em] mb-12 text-yakusa-text-light relative">
+            <div className="text-2xl lg:text-3xl font-light tracking-[0.3em] mb-12 text-yakusa-text-light relative">
               やくさのいかづち
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yakusa-accent/10 to-transparent blur-xl opacity-0 hover:opacity-100 transition-opacity duration-500" />
-            </p>
+            </div>
           </motion.div>
           
           {/* サブタイトル */}
