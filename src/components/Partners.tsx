@@ -44,25 +44,25 @@ export function Partners() {  const partners = [
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}              className="zeta-card bg-yakusa-bg-card/90 border border-yakusa-text/8 text-center"
             >
-              <div className="w-16 h-16 relative mx-auto mb-6 rounded overflow-hidden bg-yakusa-text/8">
+              <div className="w-24 h-24 relative mx-auto mb-6 rounded-full overflow-hidden bg-yakusa-text/8">
                 <Image
                   src={partner.logo}
                   alt={`${partner.name} logo`}
                   fill
                   className="object-contain p-2"
-                  sizes="64px"
+                  sizes="96px"
                   onError={(e) => {
                     // フォールバック：画像が見つからない場合は非表示にしてプレースホルダーを表示
                     e.currentTarget.style.display = 'none';
                   }}
                 />
-              </div>              <h3 className="text-3xl font-medium text-yakusa-text mb-2 tracking-wider">
+              </div>              <h3 className="text-2xl font-medium text-yakusa-text mb-2 tracking-wider">
                 {partner.name}
               </h3>
-              <p className="text-2xl text-yakusa-text-light mb-4 font-medium tracking-wider uppercase">
+              <p className="text-xl text-yakusa-text-light mb-4 font-medium tracking-wider uppercase">
                 {partner.category}
               </p>
-              <p className="text-2xl text-yakusa-text-muted leading-relaxed font-light">
+              <p className="text-xl text-yakusa-text-muted leading-relaxed font-light">
                 {partner.description}
               </p>
             </motion.div>

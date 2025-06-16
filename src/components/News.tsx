@@ -5,22 +5,10 @@ import { motion } from 'framer-motion';
 export function News() {
   const newsItems = [
     {
-      date: '2025.06.14',
-      category: 'EVENT',
-      title: '第1回八雷神フォーラム開催決定',
-      description: '港区白金において、地域活性化をテーマとした初回フォーラムを開催いたします。'
-    },
-    {
       date: '2025.06.01',
       category: 'TEAM',
       title: '八雷神発足のお知らせ',
-      description: '混沌からの創造をテーマに、新たな市民団体「八雷神」が正式に発足いたしました。'
-    },
-    {
-      date: '2025.05.28',
-      category: 'PARTNERSHIP',
-      title: '地域パートナーシップ締結',
-      description: '白金地域の複数企業・団体とパートナーシップを締結し、活動基盤を構築しました。'
+      description: '混沌からの創造をテーマに、新たなライフスタイルブランド「八雷神(yakusa-no-ikazuchi)」が正式に発足いたしました。'
     }
   ];
 

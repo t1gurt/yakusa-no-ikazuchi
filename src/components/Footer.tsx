@@ -8,7 +8,7 @@ export function Footer() {
               Creation out of decay.
             </p>
             <p className="text-lg text-yakusa-text-muted font-light">
-              港区白金を拠点とするライフスタイルブランド。
+              港区白金を拠点とするライフスタイルブランド
             </p>
           </div>
 
@@ -24,10 +24,10 @@ export function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center">            <p className="text-lg text-yakusa-text-muted font-light">
               © 2025 八雷神. All rights reserved.
             </p>            <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-lg text-yakusa-text-muted hover:text-yakusa-accent transition-colors duration-200 font-light">
+              <a href="/privacy" className="text-lg text-yakusa-text-muted hover:text-yakusa-accent transition-colors duration-200 font-light">
                 プライバシーポリシー
               </a>
-              <a href="#" className="text-lg text-yakusa-text-muted hover:text-yakusa-accent transition-colors duration-200 font-light">
+              <a href="/terms" className="text-lg text-yakusa-text-muted hover:text-yakusa-accent transition-colors duration-200 font-light">
                 利用規約
               </a>
             </div>
