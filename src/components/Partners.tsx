@@ -93,10 +93,9 @@ export function Partners() {
               <div className="absolute inset-0 bg-yakusa-bg-card/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               {/* カードコンテンツ */}
-              <div className="relative p-8 text-center h-full flex flex-col">
-                {/* ロゴ */}
+              <div className="relative p-8 text-center h-full flex flex-col">                {/* ロゴ */}
                 <div className="relative mb-8 mx-auto">
-                  <div className="w-24 h-24 lg:w-28 lg:h-28 relative rounded-2xl overflow-hidden bg-gradient-to-br from-yakusa-accent/20 to-yakusa-accent/5 border border-white/10 group-hover:border-yakusa-accent/40 transition-all duration-500 group-hover:scale-105 flex items-center justify-center">
+                  <div className="w-24 h-24 lg:w-28 lg:h-28 relative rounded-2xl overflow-hidden group-hover:scale-105 transition-all duration-500 flex items-center justify-center">
                     <Image
                       src={partner.logo}
                       alt={`${partner.name} logo`}
@@ -110,11 +109,9 @@ export function Partners() {
                   </div>
                   {/* グロー効果 */}
                   <div className="absolute inset-0 rounded-2xl bg-yakusa-accent/20 blur-xl opacity-0 group-hover:opacity-30 transition-all duration-500 -z-10" />
-                </div>
-
-                {/* カテゴリー */}
+                </div>                {/* カテゴリー */}
                 <div className="mb-4">
-                  <span className="inline-block px-3 py-1 bg-yakusa-accent/15 text-yakusa-accent rounded-full text-sm font-medium border border-yakusa-accent/25 group-hover:border-yakusa-accent/40 transition-all duration-300">
+                  <span className="inline-block px-4 py-2 text-yakusa-text-muted text-sm font-medium tracking-wide uppercase">
                     {partner.category}
                   </span>
                 </div>
@@ -151,10 +148,8 @@ export function Partners() {
               initial={{ scale: 0.9, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.8 }}
-              viewport={{ once: true }}
-              className="relative group bg-gradient-to-br from-yakusa-bg-card/30 to-yakusa-bg-card/10 rounded-3xl p-12 border border-white/10 hover:border-yakusa-accent/30 transition-all duration-500"
+              viewport={{ once: true }}              className="relative group bg-gradient-to-br from-yakusa-bg-card/30 to-yakusa-bg-card/10 rounded-3xl p-12 border border-white/10 hover:border-yakusa-accent/30 transition-all duration-500"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-yakusa-accent/5 to-yakusa-accent/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-all duration-500 blur-xl" />
               
               <div className="relative z-10">
                 <h3 className="text-3xl lg:text-4xl font-medium text-yakusa-text mb-6 tracking-wide">
