@@ -1,0 +1,26 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景円 -->
+  <circle cx="100" cy="100" r="100" fill="#fefce8"/>
+  
+  <!-- 顔 -->
+  <circle cx="100" cy="80" r="35" fill="#fde68a"/>
+  
+  <!-- 体 -->
+  <ellipse cx="100" cy="155" rx="50" ry="35" fill="#fde68a"/>
+  
+  <!-- 髪（子供風のくせ毛） -->
+  <path d="M75 58 Q85 45 95 52 Q105 40 115 52 Q125 45 125 58 Q120 68 115 72 Q110 78 100 78 Q90 78 85 72 Q80 68 75 58 Z" fill="#92400e"/>
+  
+  <!-- 目（大きめ） -->
+  <circle cx="90" cy="75" r="4" fill="#451a03"/>
+  <circle cx="110" cy="75" r="4" fill="#451a03"/>
+  <circle cx="90" cy="74" r="1" fill="#fff"/>
+  <circle cx="110" cy="74" r="1" fill="#fff"/>
+  
+  <!-- 口（無邪気な笑顔） -->
+  <ellipse cx="100" cy="90" rx="6" ry="4" fill="#d97706"/>
+  
+  <!-- ほっぺ -->
+  <circle cx="75" cy="85" r="5" fill="#f59e0b" opacity="0.4"/>
+  <circle cx="125" cy="85" r="5" fill="#f59e0b" opacity="0.4"/>
+</svg>
