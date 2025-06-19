@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { getImagePath } from '@/utils/paths';
 import Image from 'next/image';
 
 export function Partners() {
@@ -9,25 +10,25 @@ export function Partners() {
       name: 'パートナー企業A',
       category: 'Technology',
       description: 'デジタル変革を通じたコミュニティ支援',
-      logo: '/images/partners/partner-a.svg'
+      logo: getImagePath('/images/partners/partner-a.svg')
     },
     {
       name: 'パートナー企業B',
       category: 'Culture',
       description: '伝統文化保存と現代アートの融合プロジェクト',
-      logo: '/images/partners/partner-b.svg'
+      logo: getImagePath('/images/partners/partner-b.svg')
     },
     {
       name: 'パートナー企業C',
       category: 'Community',
       description: '地域住民との持続可能な関係構築',
-      logo: '/images/partners/partner-c.svg'
+      logo: getImagePath('/images/partners/partner-c.svg')
     },
     {
       name: 'パートナー企業D',
       category: 'Innovation',
       description: '革新的なソリューションによる地域課題解決',
-      logo: '/images/partners/partner-d.svg'
+      logo: getImagePath('/images/partners/partner-d.svg')
     }
   ];
 

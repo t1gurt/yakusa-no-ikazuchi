@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { getImagePath } from '@/utils/paths';
 
 export function About() {
   const [showConcepts, setShowConcepts] = useState(false);
@@ -47,9 +48,8 @@ export function About() {
           >
             <div className="relative group">
               <div className="absolute inset-0 bg-yakusa-accent/20 rounded-full blur-xl opacity-0 group-hover:opacity-60 transition-all duration-500" />
-              <div className="relative w-32 h-32 lg:w-40 lg:h-40 rounded-full overflow-hidden group-hover:scale-105 transition-all duration-500">
-                <img 
-                  src="/images/logo/yakusa-logo-square.png" 
+              <div className="relative w-32 h-32 lg:w-40 lg:h-40 rounded-full overflow-hidden group-hover:scale-105 transition-all duration-500">                <img 
+                  src={getImagePath("/images/logo/yakusa-logo-square.png")} 
                   alt="八雷神ロゴ" 
                   className="w-full h-full object-contain p-4"
                 />

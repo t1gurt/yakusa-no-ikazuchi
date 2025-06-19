@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { getImagePath } from "@/utils/paths";
 
 const navLinksLeft = [
   { name: "ABOUT", href: "#about" },
@@ -81,7 +82,7 @@ export function Navigation() {
                 className="relative group hover:opacity-80 transition-all duration-300"
               >                <div className="relative">
                   <Image
-                    src="/images/logo/yakusa-logo-horizontal.png"
+                    src={getImagePath("/images/logo/yakusa-logo-horizontal.png")}
                     alt="八雷神"
                     width={180}
                     height={54}
@@ -136,9 +137,8 @@ export function Navigation() {
               <Link 
                 href="/" 
                 className="relative group hover:opacity-80 transition-opacity duration-200"
-              >
-                <Image
-                  src="/images/logo/yakusa-logo-square.png"
+              >                <Image
+                  src={getImagePath("/images/logo/yakusa-logo-square.png")}
                   alt="八雷神"
                   width={48}
                   height={48}
