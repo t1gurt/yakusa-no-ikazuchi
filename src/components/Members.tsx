@@ -24,7 +24,7 @@ export function Members() {
       role: "ビール党",
       description: "42歳。越境学習が趣味。",
       detailedDescription: "テクノロジーと伝統の架け橋として活動する42歳。日々の越境学習を通じて新しい価値創造に取り組んでいます。ビール愛好家としても知られ、醸造文化と地域コミュニティの発展に情熱を注いでいます。",
-      image: "/images/members/keisuke.jpg",
+      image: "/images/members/keisuke.svg",
       tags: ["テクノロジー", "越境学習", "ビール", "コミュニティ"],
       achievements: ["地域IT推進賞受賞", "クラフトビール検定1級", "越境学習プログラム設計"],
       interests: ["醸造技術", "デジタル変革", "地域活性化"]
@@ -34,7 +34,7 @@ export function Members() {
       role: "ママ",
       description: "恋愛バラエティが大好き！",
       detailedDescription: "家族の絆を大切にしながら、現代的な価値観で地域コミュニティに貢献するママ。恋愛バラエティを通じて人間関係の機微を理解し、それをコミュニティ運営に活かしています。温かい人柄で多くの人々に愛されています。",
-      image: "/images/members/ayako.jpg",
+      image: "/images/members/ayako.svg",
       tags: ["ファミリー", "コミュニティ", "エンターテイメント", "人間関係"],
       achievements: ["地域子育て支援功労賞", "コミュニティイベント企画100回達成"],
       interests: ["恋愛バラエティ", "子育て支援", "地域イベント企画"]
@@ -44,7 +44,7 @@ export function Members() {
       role: "かわいい担当",
       description: "とにかくかわいい1年生。",
       detailedDescription: "八雷神の最年少メンバーとして、純粋な心と無限の可能性を持つ1年生。その愛らしさで周囲の人々を笑顔にし、新鮮な視点で組織に活力をもたらしています。未来のリーダーとして期待されています。",
-      image: "/images/members/toramasa.jpg",
+      image: "/images/members/toramasa.svg",
       tags: ["次世代", "純粋", "エネルギー", "未来"],
       achievements: ["地域子ども大使任命", "笑顔大賞受賞"],
       interests: ["遊び", "学習", "新しい発見"]
