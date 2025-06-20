@@ -71,7 +71,7 @@ export function Navigation() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-      >        <div className="max-w-7xl mx-auto px-6 py-0 md:py-4">          {/* Desktop Menu - Center Layout */}
+      >        <div className="max-w-7xl mx-auto px-6 py-1.5 md:py-4">          {/* Desktop Menu - Center Layout */}
           <div className="hidden md:grid grid-cols-3 items-center w-full">
             {/* Left Navigation */}
             <motion.ul 
@@ -157,7 +157,7 @@ export function Navigation() {
               ))}
             </motion.ul>
           </div>          {/* Mobile Menu Layout */}
-          <div className="md:hidden flex items-center justify-center py-0 relative">
+          <div className="md:hidden flex items-center justify-center py-1.5 relative">
             {/* Mobile Logo - 中央配置 */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}

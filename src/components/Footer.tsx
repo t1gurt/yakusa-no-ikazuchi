@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { getPagePath } from '@/utils/paths';
 
 export function Footer() {
   const socialLinks = [
@@ -210,13 +211,13 @@ export function Footer() {
               transition={{ duration: 0.8, delay: 0.8 }}
               viewport={{ once: true }}
             >              <a 
-                href="/privacy" 
+                href={getPagePath("/privacy")} 
                 className="text-lg !text-white hover:!text-gray-300 transition-colors duration-300 font-light tracking-wide"
               >
                 プライバシーポリシー
               </a>
               <a 
-                href="/terms" 
+                href={getPagePath("/terms")} 
                 className="text-lg !text-white hover:!text-gray-300 transition-colors duration-300 font-light tracking-wide"
               >
                 利用規約
