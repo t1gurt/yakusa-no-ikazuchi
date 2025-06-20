@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { getImagePath } from '@/utils/paths';
 
 interface Member {
@@ -18,6 +18,47 @@ interface Member {
 
 export function Members() {
   const [selectedMember, setSelectedMember] = useState<Member | null>(null);
+  const scrollPositionRef = useRef(0);  // モーダルが開いているときにスクロールを防ぐ
+  useEffect(() => {
+    if (selectedMember) {
+      // 現在のスクロール位置を保存
+      const scrollY = window.scrollY;
+      scrollPositionRef.current = scrollY;
+      document.body.classList.add('modal-open');
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.width = '100%';
+      document.body.style.overflow = 'hidden';
+    }
+
+    // クリーンアップ関数でスクロールを復元
+    return () => {
+      if (selectedMember === null) {
+        document.body.classList.remove('modal-open');
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.width = '';
+        document.body.style.overflow = '';
+      }
+    };
+  }, [selectedMember]);
+
+  // Escキーでモーダルを閉じる
+  useEffect(() => {
+    const handleEscKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape' && selectedMember) {
+        closeModal();
+      }
+    };
+
+    if (selectedMember) {
+      document.addEventListener('keydown', handleEscKey);
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleEscKey);
+    };
+  }, [selectedMember]);
 
   const members: Member[] = [
     {
@@ -51,9 +92,25 @@ export function Members() {
       interests: ["遊び", "学習", "新しい発見"]
     }
   ];
-
   const closeModal = () => {
-    setSelectedMember(null);
+    // まずスタイルをリセット
+    document.body.classList.remove('modal-open');
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+    document.body.style.overflow = '';
+    
+    // スクロール位置を復元
+    const savedPosition = scrollPositionRef.current;
+    if (savedPosition > 0) {
+      requestAnimationFrame(() => {
+        window.scrollTo(0, savedPosition);
+        // スクロール復元後にstateを更新
+        setSelectedMember(null);
+      });
+    } else {
+      setSelectedMember(null);
+    }
   };
   return (
     <section id="members" className="zeta-section relative overflow-hidden">
@@ -184,8 +241,9 @@ export function Members() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/70 backdrop-blur-md z-40 flex items-center justify-center p-4 pt-24 overflow-hidden"
+            className="modal-overlay fixed inset-0 bg-black/70 backdrop-blur-md z-[99999] flex items-center justify-center p-4 pt-24 overflow-hidden"
             onClick={closeModal}
+            style={{ zIndex: 99999 }}
           >
             <motion.div
               initial={{ opacity: 0, scale: 0.8, y: 50 }}
@@ -195,8 +253,8 @@ export function Members() {
                 duration: 0.4,
                 type: "spring",
                 bounce: 0.1
-              }}
-              className="bg-gradient-to-br from-yakusa-bg-card/95 to-yakusa-bg-card/90 backdrop-blur-xl rounded-3xl max-w-5xl w-full h-[85vh] flex flex-col border border-white/15 shadow-2xl relative"
+              }}              className="modal-content bg-gradient-to-br from-yakusa-bg-card/95 to-yakusa-bg-card/90 backdrop-blur-xl rounded-3xl max-w-5xl w-full h-[85vh] flex flex-col border border-white/15 shadow-2xl relative z-[100000]"
+              style={{ zIndex: 100000 }}
               onClick={(e) => e.stopPropagation()}
             >
               {/* 背景装飾 */}

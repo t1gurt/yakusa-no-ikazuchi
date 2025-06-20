@@ -203,8 +203,7 @@ export function Footer() {
               viewport={{ once: true }}
             >
               © 2025 八雷神. All rights reserved.
-            </motion.p>
-            <motion.div 
+            </motion.p>            <motion.div 
               className="flex space-x-8"
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}

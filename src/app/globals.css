@@ -47,6 +47,46 @@ body {
   line-height: 1.6;
 }
 
+/* モーダル用のz-index管理 */
+.modal-overlay {
+  z-index: 99999 !important;
+  position: fixed !important;
+}
+
+.modal-content {
+  z-index: 100000 !important;
+  position: relative !important;
+}
+
+/* モーダル開閉時のスクロール制御 */
+body.modal-open {
+  overflow: hidden !important;
+  position: fixed !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* モーダル表示時に他の要素のz-indexを制御 */
+body.modal-open > *:not(.modal-overlay) {
+  position: relative;
+  z-index: 1 !important;
+}
+
+/* Navigation等の固定要素のz-indexを制御 */
+body.modal-open nav,
+body.modal-open header,
+body.modal-open .fixed,
+body.modal-open [class*="fixed"],
+body.modal-open [class*="sticky"] {
+  z-index: 1 !important;
+}
+
+/* モーダル関連要素は例外 */
+body.modal-open .modal-overlay,
+body.modal-open .modal-content {
+  z-index: 99999 !important;
+}
+
 /* ZETA風のミニマルスタイル */
 .zeta-container {
   max-width: 1200px;

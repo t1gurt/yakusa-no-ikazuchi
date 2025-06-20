@@ -1,20 +1,4 @@
-<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- 背景円 -->
-  <circle cx="100" cy="100" r="100" fill="#f8fafc"/>
-  
-  <!-- 顔 -->
-  <circle cx="100" cy="80" r="35" fill="#e2e8f0"/>
-  
-  <!-- 体 -->
-  <ellipse cx="100" cy="155" rx="50" ry="35" fill="#e2e8f0"/>
-  
-  <!-- 髪 -->
-  <path d="M65 60 Q100 45 135 60 Q135 70 100 75 Q65 70 65 60 Z" fill="#64748b"/>
-  
-  <!-- 目 -->
-  <circle cx="90" cy="75" r="3" fill="#334155"/>
-  <circle cx="110" cy="75" r="3" fill="#334155"/>
-  
-  <!-- 口 -->
-  <path d="M95 90 Q100 95 105 90" stroke="#64748b" stroke-width="2" fill="none" stroke-linecap="round"/>
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="32" cy="32" r="32" fill="#b20024"/>
+  <text x="32" y="40" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">パ</text>
 </svg>
